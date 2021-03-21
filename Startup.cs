@@ -26,7 +26,7 @@ namespace DublinBikesApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<Context>(option => option.UseMySql(Configuration.GetConnectionString("BikesDb")));
+            services.AddDbContext<Context>(option => option.UseSqlServer(Configuration.GetConnectionString("BikesDb")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
