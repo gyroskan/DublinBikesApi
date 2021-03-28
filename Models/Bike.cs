@@ -11,10 +11,16 @@ namespace DublinBikesApi.Models
         [Key]
         public int Number { get; set; }
         [Required]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{2,40}$",
+         ErrorMessage = "Characters are not allowed.")]
         public string ContractName { get; set; }
         [Required]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{2,40}$",
+         ErrorMessage = "Characters are not allowed.")]
         public string Name { get; set; }
         [Required]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,200}$",
+         ErrorMessage = "Characters are not allowed.")]
         public string Address { get; set; }
         [Required]
         public decimal Latitude { get; set; }
@@ -29,7 +35,7 @@ namespace DublinBikesApi.Models
         [Required]
         public int Capacity { get; set; }
         [Required]
-        public string Status { get; set; }
+        public bool Open { get; set; }
 
     }
 }
