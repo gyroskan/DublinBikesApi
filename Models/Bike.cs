@@ -35,7 +35,7 @@ namespace DublinBikesApi.Models
         [Required]
         public int Capacity { get; set; }
         [Required]
-        public bool Open { get; set; }
+        public string Status { get; set; }
 
     }
 }
