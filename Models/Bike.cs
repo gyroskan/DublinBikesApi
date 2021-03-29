@@ -35,6 +35,7 @@ namespace DublinBikesApi.Models
         [Required]
         public int Capacity { get; set; }
         [Required]
+        [RegularExpression("OPEN|CLOSE")]
         public string Status { get; set; }
 
     }
