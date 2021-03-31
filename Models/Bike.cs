@@ -19,7 +19,7 @@ namespace DublinBikesApi.Models
          ErrorMessage = "Characters are not allowed.")]
         public string Name { get; set; }
         [Required]
-        [RegularExpression(@"^[a-zA-Z''-'\s]{1,200}$",
+        [RegularExpression(@"^[a-zA-Z0-9''-'\s]{1,200}$",
          ErrorMessage = "Characters are not allowed.")]
         public string Address { get; set; }
         [Required]
